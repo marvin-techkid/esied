@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Favicon-->
+        <link href="assets/img/favicon/Android Medium - 1.jpg" rel="icon">
+
+        <link rel="stylesheet" href="style.css">
+        <!--<link rel="stylesheet" href="main.css">-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css?family=Arimo:itsl,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+        <!--Links da biblioteca vendor da bootstrap-->
+        <!--<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
+        <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+        <!--<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">-->
+
+        <title>EsiEd-Educaçao Inteligente</title>
+</head>
+<body>
+    <header class="header d-flex align-items-center sticky-top"> <!--Adicionar a foto da escola-->
+        <div class="nav-container">
+            <div class="logo">EsiEd</div>
+            <nav class="menu">
+            <a href="inicio.html">Pagina inicial</a>
+            <a href="Index.html#biblioteca">Biblioteca</a>
+            <a href="vocacoes.html">Vocacoes</a>
+            <a href="#sobre">Sobre</a>
+            <a class="btn-getstarted" href="testelogin.html">Entrar</a>
+            </nav>
+        </div>
+    </header>
+        
+        <section id="vocacoes" class="vocacoes">
+        <h2>Registrar Progresso</h2>
+        <p class="subtitulo">Registra a tua actividade e distingue-te pelo teu progresso!</p>
+<!--Fazer formulario de alunos mais ativos, a classe, idade, e a disciplina que e mais activo-->        
+
+        <form class="formulario-activos">
+            <div class="campo-grupo">
+                <label for="nome">Nome do aluno(a):</label>
+                <input type="text" id="nome" placeholder="O teu nome completo" required>
+            </div>
+
+            <div class="campo-grupo">
+                <label for="classe">Classe</label>
+                <input type="text" id="classe" placeholder="Ex:12a classe" required>
+            </div>
+
+            <div class="campo-grupo">
+                <label for="disciplina-activa">Disciplinas mais activas:</label>
+                <select id="disciplina-activa">
+                    <option value="matematica">Matematica</option>
+                    <option value="fisica">Fisica</option>
+                    <option value="biologia">Biologia</option>
+                    <option value="quimica">Quimica</option>
+                    <option value="portugues">Portugues</option>
+                    <option value="ingles">Ingles</option>
+                </select>
+            </div>
+            <button type="submit" class="btn-enviar">Enviar o meu Registro</button>
+         </form>
+    </section>
+
+    <footer id="sobre">
+        <div class="footer-conteudo">
+            <div class="footer-bloco">
+                <h4>Sobre o EsiEd</h4>
+                <p>O EsiEd desenvolvido por aluno da nossa escola para os alunos da escola. </p>
+                <p>Construindo o futuro que molda o nosso pais!</p>
+                <p>Propriedade Moçambicana!</p>
+
+                <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-tiktok"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+          </div>
+            </div>
+            <div class="footer-bloco">
+                <h4>Ficha Tecnica</h4>
+                <p>O desenvolvedor: Marvin Pedro Muianga</p>
+                <p>&copy Julho, 2026. Todos os direitos reservados.</p>
+                <blockquote><cite><p>"Porque limites, como o medo, são muitas vezes uma ilusão."</blockquote></cite> M.J.Jordan</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Scroll Top
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>-->
+
+    <script src="script.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

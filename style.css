@@ -1,0 +1,459 @@
+/*Raizes de cores*/
+:root {
+  --default-font: "Open Sans",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: 'Georgia', serif,  sans-serif;
+  --nav-font: "Poppins",  sans-serif;
+}
+
+/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+:root { 
+  --background-color: #68a9de; /* Background color for the entire website, including individual sections */
+  --default-color: #000000; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #000000; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #000000; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #fff1f1; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+}
+
+/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+:root {
+  --nav-color: #151919;  /* The default color of the main navmenu links */
+  --nav-hover-color: #fbe87b; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #f3f3f3; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #272828; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #fbe87b; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+}
+
+/*Definicoes gerais*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(102, 129, 160);
+    font-size: 16px;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/*Cabeca do site incluindo a navbar*/
+header {
+    background-color: rgb(250, 250, 178);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: o 2px 10px rgb(24, 22, 22);
+}
+
+header .logo{
+    line-height: 1;
+}
+@media (max-width: 1200px) {
+  .header .logo {
+    order: 1;
+  }
+  .header .navmenu {
+    order: 3;
+  }
+}
+/*Botao de entrada*/
+.header .btn-getstarted,
+.header .btn-getstarted:focus {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  font-size: 14px;
+  padding: 8px 25px;
+  margin: 0 0 0 30px;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+.header .btn-getstarted:hover,
+.header .btn-getstarted:focus:hover {
+  color: var(--contrast-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 15%);
+}
+
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    flex-direction: row;
+    gap: 60px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    font-family: 'Georgia', serif;
+    text-align: start;
+}
+
+.menu a {
+    color: black;
+    text-decoration: none; 
+    margin-left: 20px;
+    margin: 0 10px;
+    font-weight: 500;
+}
+
+/*Barra de pesquisa*/
+.pesquisa {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.pesquisa input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.menu a:hover {
+    color: darkgoldenrod; /* Muda de cor ao passar o rato */
+}
+
+/* ==========================================================================
+   3. SECÇÃO HERO (BOAS-VINDAS)
+   ========================================================================== */
+.hero {
+    padding: 60px 20px;
+    text-align: center;
+    background: linear-gradient(rgba(245, 245, 220, 0.8), rgba(245, 245, 220, 0.8)); /* Fundo beige suave */
+    margin-bottom: 40px;
+}
+
+.hero-conteudo {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.descricao-hero {
+    font-size: 18px;
+    color: #444;
+}
+
+/* ==========================================================================
+   4. BIBLIOTECA (DISCIPLINAS EM GRADE)
+   ========================================================================== */
+.biblioteca {
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.biblioteca h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.subtitulo {
+    color: black;
+    margin-bottom: 30px;
+}
+
+/* Criar uma grelha moderna para os cartões */
+.grade-disciplinas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsivo automático */
+    gap: 20px;
+}
+
+.cartao-disciplina {
+    background-color: rgb(236, 241, 242);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .5);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Contentor das Opções (Escondido por padrão) */
+.conteudo-materias {
+    display: flex;
+    margin-top: 15px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Botões de Resumos, Exercícios e Trabalhos */
+.btn-opcao {
+    background-color: beige;
+    color: black;
+    border: 1px solid burlywood;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn-opcao:hover {
+    background-color: burlywood;
+    color: black;
+}
+
+
+/* ==========================================================================
+   5. FORMULÁRIO DE VOCAÇÕES
+   ========================================================================== */
+.vocacoes {
+    max-width: 600px;
+    margin: 0 auto 60px auto;
+    background-color: rgb(243, 243, 243);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.formulario-activos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+
+.campo-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.campo-grupo label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.campo-grupo input, .campo-grupo select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.btn-enviar {
+    background-color: black;
+    color: gold; /* Destaque dourado no botão de ação */
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-enviar:hover {
+    background-color: green;
+}
+
+.campo-dados {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.campo-dados label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.campo-dados input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.formulario-registro {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+    align-items: left;
+}
+
+.entrada {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgb(206, 206, 206);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.conteiner-formulario {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+}
+/* ==========================================================================
+   6. RODAPÉ PROFISSIONAL (FOOTER)
+   ========================================================================== */
+footer {
+    background-color: black;
+    color: white;
+    padding: 40px 20px;
+    padding-bottom: 50px;
+    margin-top: 40px;
+    position: relative;
+}
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
+  font-size: 18px;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  margin-right: 10px;
+  transition: 0.3s;
+  color: gold; /* Títulos do rodapé em dourado */
+}
+
+.social-links a:hover {
+  color: grey;
+  border-color: var(--accent-color);
+}
+
+.footer-conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Se não couber, quebra a linha em ecrãs pequenos */
+    gap: 20px;
+}
+
+.footer-bloco h4 {
+    color: gold; /* Títulos do rodapé em dourado */
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.footer-bloco p {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 5px;
+}
+
+/*7. Listas de cada documento da pagina*/
+#lista-resumos,
+#lista-exercicios,
+#lista-trabalhos{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#lista-resumos a,
+#lista-exercicios a,
+#lista-trabalhos a{
+    display: block;
+    margin: 6px 0;
+    color: #222e3f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#lista-resumos a:hover,
+#lista-exercicios a:hover,
+#lista-trabalhos a:hover{
+    text-decoration: underline;
+}
+
+#lista-resumos-1,
+#lista-exercicios-1,
+#lista-trabalhos-1{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#lista-resumos-1 a,
+#lista-exercicios-1 a,
+#lista-trabalhos-1 a{
+    display: block;
+    margin: 6px 0;
+    color: #222e3f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#lista-resumos-1 a:hover,
+#lista-exercicios-1 a:hover,
+#lista-trabalhos-1 a:hover{
+    text-decoration: underline;
+}
+
+#lista-resumos-2,
+#lista-exercicios-2,
+#lista-trabalhos-2{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#lista-resumos-2 a,
+#lista-exercicios-2 a,
+#lista-trabalhos-2 a{
+    display: block;
+    margin: 6px 0;
+    color: #222e3f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#lista-resumos-2 a:hover,
+#lista-exercicios-2 a:hover,
+#lista-trabalhos-2 a:hover{
+    text-decoration: underline;
+}
+
+#lista-resumos-3,
+#lista-exercicios-3,
+#lista-trabalhos-3{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#lista-resumos-3 a,
+#lista-exercicios-3 a,
+#lista-trabalhos-3 a{
+    display: block;
+    margin: 6px 0;
+    color: #222e3f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#lista-resumos-3 a:hover,
+#lista-exercicios-3 a:hover,
+#lista-trabalhos-3 a:hover{
+    text-decoration: underline;
+}
